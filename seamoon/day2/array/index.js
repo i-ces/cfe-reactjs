@@ -11,10 +11,24 @@ const arr3 = ["hello", "world"];
 
 const str = "hello world";
 
-const superArr = [arr1, arr2, arr3, str];
+const diverseArr = [1, "a", "hello", 2, "b", "world", 3, "c", "d", "e"];
 
-console.log("combined array start");
+const superArr = [arr1, arr2, arr3];
 
-console.log(superArr);
+// console.log("combined array start");
 
-console.log("combined array end");
+// console.log(superArr);
+
+// console.log("combined array end");
+
+/* accessing the array */
+
+// console.log(arr1[0]); // 1
+// console.log(arr2[1]); // b
+// console.log(arr3[0]); // hello
+
+/* flattening the array */
+
+const superImpose = [100, 200, 300, ...arr1, ...arr2, ...arr3];
+
+console.log(superImpose);
