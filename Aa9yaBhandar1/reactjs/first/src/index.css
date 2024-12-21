@@ -1,13 +1,42 @@
-body {
+.header {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  background: linear-gradient(90deg, #505f42, #a0996d);
+}
+#logo {
+  width: 3%;
+  background: transparent;
+}
+.card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border: 0.2rem solid black;
+  width: 25%;
+  height: 5%;
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.pp {
+  width: 35%;
+  height: 12rem;
+  margin-top: 2rem;
+  transition: transform;
+  object-fit: cover;
+}
+.pp:hover {
+  transform: scale(1, 1) 1s ease;
+}
+#name,
+#rollno,
+#description {
+  margin: 0.3rem;
+  padding: 0;
+}
+
+#button {
+  margin-bottom: 0.5rem;
 }

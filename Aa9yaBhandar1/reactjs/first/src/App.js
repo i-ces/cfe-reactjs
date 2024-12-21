@@ -1,9 +1,13 @@
-function App() {
+import React from "react";
+import Card from "./card.js";
+//import Header from "./Header.js";
+
+const App = () => {
   return (
-    <div>
-      <h1>Hello world</h1>
-    </div>
+    <>
+      <Card />
+    </>
   );
-}
+};
 
 export default App;
