@@ -5,6 +5,9 @@ function App() {
     <>
       <nav
         style={{
+          padding: "0 20px",
+          position: "sticky",
+          top: "0",
           backgroundColor: "pink",
           height: "50px",
           display: "flex",
@@ -14,7 +17,49 @@ function App() {
         <h1>Todo App</h1>
       </nav>
 
-      <main>
+      <main
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <Todo
+          description={
+            "React is a JavaScript library for building user interfaces"
+          }
+          title={"Learn React"}
+        />
+        <Todo
+          description={
+            "React is a JavaScript library for building user interfaces"
+          }
+          title={"Learn React"}
+        />
+        <Todo
+          description={
+            "React is a JavaScript library for building user interfaces"
+          }
+          title={"Learn React"}
+        />
+        <Todo
+          description={
+            "React is a JavaScript library for building user interfaces"
+          }
+          title={"Learn React"}
+        />
+        <Todo
+          description={
+            "React is a JavaScript library for building user interfaces"
+          }
+          title={"Learn React"}
+        />
+        <Todo
+          description={
+            "React is a JavaScript library for building user interfaces"
+          }
+          title={"Learn React"}
+        />
         <Todo
           description={
             "React is a JavaScript library for building user interfaces"
