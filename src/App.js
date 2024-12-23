@@ -15,7 +15,12 @@ function App() {
       </nav>
 
       <main>
-        <Todo />
+        <Todo
+          description={
+            "React is a JavaScript library for building user interfaces"
+          }
+          title={"Learn React"}
+        />
       </main>
     </>
   );
