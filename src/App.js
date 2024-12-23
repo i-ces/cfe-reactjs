@@ -1,8 +1,23 @@
+import Todo from "./components/Todo";
+
 function App() {
   return (
-    <div>
-      <h1> Hello World </h1>
-    </div>
+    <>
+      <nav
+        style={{
+          backgroundColor: "pink",
+          height: "50px",
+          display: "flex",
+          alignItems: "center",
+        }}
+      >
+        <h1>Todo App</h1>
+      </nav>
+
+      <main>
+        <Todo />
+      </main>
+    </>
   );
 }
 
