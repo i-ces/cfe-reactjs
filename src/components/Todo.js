@@ -1,33 +1,19 @@
 import React from "react";
 
+import "./Todo.css";
+
 function Todo({ title, description }) {
+  const handleDelete = () => {
+    alert("Delete button clicked");
+  };
   return (
-    <div
-      style={{
-        border: "1px solid grey",
-        padding: "10px",
-        margin: "10px",
-        borderRadius: "5px",
-        width: "300px",
-      }}
-    >
-      <h2
-        style={{
-          color: "navy",
-          borderBottom: "1px solid black",
-          padding: "5px",
-        }}
-      >
-        {title}
-      </h2>
-      <p
-        style={{
-          color: "gray",
-          padding: "5px",
-        }}
-      >
-        {description}
-      </p>
+    <div className="todo">
+      <h2 className="todo--title">{title}</h2>
+      <p className="todo--description">{description}</p>
+
+      <button className="todo--button-delete" onClick={handleDelete}>
+        <span className="material-symbols-outlined">delete</span>
+      </button>
     </div>
   );
 }
