@@ -22,15 +22,19 @@ function App() {
       </nav>
 
       <main className="main">
-        <div className="form">
+        <form className="form">
           <input
+            className="form--input"
             name="task"
             type="text"
             placeholder="Enter your task"
             value={task}
-            onChange={(e) => setTask(e.target.value)}
+            onChange={(event) => setTask(event.target.value)}
           />
-        </div>
+          <button type="submit" className="form--button">
+            +
+          </button>
+        </form>
         {todos.map((todo, index) => {
           const { title, description } = todo;
           return <Todo key={index} title={title} description={description} />;
