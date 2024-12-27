@@ -1,17 +1,22 @@
 import { useState } from "react";
 import Todo from "./components/Todo";
-
-import { todos } from "./data/todo";
+import AddTodo from "./components/AddTodo";
 
 function App() {
   // setting up the task for the form
-  const [task, setTask] = useState("");
-  const [description, setDescription] = useState("");
+  // array of tasks
+
+  const [tasks, setTasks] = useState([]);
+
   // to add tasks
-  const addTask = () => {};
+  const addTask = (title) => {
+    setTasks([...tasks, { title }]);
+  };
 
   //  to delete tasks
-  const deleteTask = () => {};
+  const deleteTask = (title) => {
+    setTasks(tasks.filter((task) => task.title !== title));
+  };
 
   // clear all items
   const clear = () => {};
@@ -34,31 +39,17 @@ function App() {
       </nav>
 
       <main className="main">
-        <form className="form" onSubmit={handleSubmit}>
-          <input
-            className="form--input form--input-task"
-            name="task"
-            type="text"
-            placeholder="Enter your task"
-            value={task}
-            required
-            onChange={(event) => setTask(event.target.value)}
-          />
-          <input
-            className="form--input form--input-description"
-            name="description"
-            placeholder="Enter the task description(option)"
-            type="text"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-          />
-          <button type="submit" className="form--button">
-            Add
-          </button>
-        </form>
-        {todos.map((todo, index) => {
+        <AddTodo onAdd={addTask} />
+        {tasks.map((todo, index) => {
           const { title, description } = todo;
-          return <Todo key={index} title={title} description={description} />;
+          return (
+            <Todo
+              key={index}
+              title={title}
+              description={description}
+              onDelete={deleteTask}
+            />
+          );
         })}
       </main>
     </>
@@ -66,8 +57,3 @@ function App() {
 }
 
 export default App;
-
-// task = ""
-
-// task = "a"
-// task = "ab"

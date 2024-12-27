@@ -2,9 +2,10 @@ import React from "react";
 
 import "./Todo.css";
 
-function Todo({ title, description }) {
-  const handleDelete = () => {
-    alert("Delete button clicked");
+function Todo({ title, description, onDelete }) {
+  const handleDelete = (e) => {
+    e.preventDefault();
+    onDelete(title);
   };
   return (
     <div className="todo">
