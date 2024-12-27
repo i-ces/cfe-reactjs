@@ -1,12 +1,18 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Todo from "./components/Todo";
 import AddTodo from "./components/AddTodo";
 
 function App() {
-  // setting up the task for the form
   // array of tasks
 
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(() => {
+    const taskList = JSON.parse(localStorage.getItem("tasks"));
+    return taskList ? taskList : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify([...tasks]));
+  }, [tasks]);
 
   // to add tasks
   const addTask = (title) => {
@@ -20,10 +26,6 @@ function App() {
 
   // clear all items
   const clear = () => {};
-
-  const getTask = () => {
-    localStorage.getItem();
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
