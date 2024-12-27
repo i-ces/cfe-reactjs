@@ -2,7 +2,7 @@
   margin-top: 20px;
   width: 420px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 10px;
 }
 .form--input {
@@ -12,11 +12,12 @@
 }
 
 .form--button {
-  padding: 10px 4px;
+  padding: 4px 20px;
   background-color: skyblue;
   border: none;
   color: white;
   font-weight: bold;
   font-size: 24px;
   width: fit-content;
+  border-radius: 12px;
 }
