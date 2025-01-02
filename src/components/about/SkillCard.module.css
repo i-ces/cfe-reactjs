@@ -1,0 +1,48 @@
+.skillCard {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.skillCard--dark {
+  background-color: #1f2937;
+}
+
+.skillCard:hover {
+  transform: scale(1.05);
+}
+
+.skillCard__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.skillCard__icon {
+  font-size: 1.5rem;
+  margin-right: 0.75rem;
+}
+
+.skillCard__name {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.skillCard__progressBar {
+  width: 100%;
+  background-color: #e5e7eb;
+  border-radius: 9999px;
+  height: 0.625rem;
+}
+
+.skillCard__progressBar--dark {
+  background-color: #374151;
+}
+
+.skillCard__progress {
+  background-color: #7e5bef;
+  height: 100%;
+  border-radius: 9999px;
+}
