@@ -1,0 +1,31 @@
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contactInfo__item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contactInfo__icon {
+  color: #7e5bef;
+}
+
+.contactInfo__icon--dark {
+  color: #a78bfa;
+}
+
+.contactInfo__title {
+  font-weight: 500;
+}
+
+.contactInfo__text {
+  color: #4b5563;
+}
+
+.contactInfo__text--dark {
+  color: #d1d5db;
+}
