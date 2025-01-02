@@ -1,0 +1,43 @@
+.about {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+.about__sectionTitle {
+  margin-bottom: 3rem;
+}
+
+.about__description {
+  font-size: 1.125rem;
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+}
+
+.about__skills {
+  margin-bottom: 3rem;
+}
+
+.about__skillsTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.about__skillsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .about__skillsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .about__skillsGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
