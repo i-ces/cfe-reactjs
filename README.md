@@ -1,6 +1,51 @@
-# Getting Started with Create React App
+# Portfolio App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a portfolio website built with React. It showcases various projects, skills, and contact information.
+
+## Table of Contents
+
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Available Scripts](#available-scripts)
+- [JavaScript Concepts](#javascript-concepts)
+- [Styling](#styling)
+
+## Getting Started
+
+To get started with this project, follow these steps:
+
+1. **Clone the repository:**
+
+   ```sh
+   git clone https://github.com/yourusername/portfolio.git
+   cd portfolio
+   ```
+
+2. **Install dependencies:**
+
+   ```sh
+   npm install
+   ```
+
+3. **Run the app in development mode:**
+
+   ```sh
+   npm start
+   ```
+
+   Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+4. **Build the app for production:**
+
+   ```sh
+   npm run build
+   ```
+
+   This will create a `build` folder with the production build of the app.
+
+## Project Structure
+
+The project structure is as follows:
 
 ## Available Scripts
 
@@ -27,8 +72,6 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
 ### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
@@ -37,34 +80,35 @@ If you aren't satisfied with the build tool and configuration choices, you can `
 
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## JavaScript Concepts
 
-## Learn More
+### 1. **React Components**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Function Components**: Used throughout the project to define UI components. Example: [HeroSection](http://_vscodecontentref_/3), [Navbar](http://_vscodecontentref_/4), [Footer](http://_vscodecontentref_/5), etc.
+- **Props**: Used to pass data to components. Example: [SectionTitle](http://_vscodecontentref_/6) receives [title](http://_vscodecontentref_/7) and [subtitle](http://_vscodecontentref_/8) as props.
+- **State**: Managed using the [useState](http://_vscodecontentref_/9) hook. Example: [ContactForm](http://_vscodecontentref_/10) manages form data and submission status.
+- **Context**: Used to manage global state. Example: [ThemeContext](http://_vscodecontentref_/11) provides theme management across the app.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 2. **React Router**
 
-### Code Splitting
+- **BrowserRouter**: Used to wrap the application and enable routing. Example: [App.jsx](http://_vscodecontentref_/12).
+- **Routes and Route**: Define different routes in the application. Example: [App.jsx](http://_vscodecontentref_/13) defines routes for [Home](http://_vscodecontentref_/14), [About](http://_vscodecontentref_/15), [Projects](http://_vscodecontentref_/16), and [Contact](http://_vscodecontentref_/17).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 3. **CSS Modules**
 
-### Analyzing the Bundle Size
+- **Scoped Styles**: CSS modules are used to scope styles to components. Example: [HeroSection.module.css](http://_vscodecontentref_/18), [Navbar.module.css](http://_vscodecontentref_/19), etc.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 4. **Framer Motion**
 
-### Making a Progressive Web App
+- **Animations**: Used to add animations to components. Example: [HeroSection](http://_vscodecontentref_/20), [ProjectCard](http://_vscodecontentref_/21), [PageTransition](http://_vscodecontentref_/22).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 5. **JavaScript ES6+ Features**
 
-### Advanced Configuration
+- **Arrow Functions**: Used to define functions. Example: [const handleSubmit = async (e) => { ... }](http://_vscodecontentref_/23) in [ContactForm](http://_vscodecontentref_/24).
+- **Template Literals**: Used to create dynamic strings. Example: [className={](http://_vscodecontentref_/25)${styles.projectCard} ${isDarkMode ? styles['projectCard--dark'] : ''}`}` in [ProjectCard](http://_vscodecontentref_/26).
+- **Destructuring**: Used to extract values from objects and arrays. Example: `const { isDarkMode } = useTheme();` in [ContactInfo](http://_vscodecontentref_/27).
+- **Spread Operator**: Used to copy and merge objects and arrays. Example: [setFormData(prev => ({ ...prev, name: e.target.value }))](http://_vscodecontentref_/28) in [ContactForm](http://_vscodecontentref_/29).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Styling
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The project uses CSS modules for styling. Each component has its own CSS module file for scoped styles. Global styles are defined in [index.css](http://_vscodecontentref_/95) ).
