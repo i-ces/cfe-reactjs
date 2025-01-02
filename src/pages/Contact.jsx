@@ -2,7 +2,7 @@ import React from 'react';
 import PageTransition from '../components/shared/PageTransition';
 import SectionTitle from '../components/shared/SectionTitle';
 import ContactForm from '../components/contact/ContactForm.jsx';
-import ContactInfo from '../components/contact/ContactInfo.jsx/index.js';
+import ContactInfo from '../components/contact/ContactInfo.jsx';
 import styles from './Contact.module.css';
 
 const Contact = () => {
