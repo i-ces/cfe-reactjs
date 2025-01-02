@@ -1,0 +1,38 @@
+.projectFilter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.projectFilter__button {
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  background-color: #f3f4f6;
+  color: #4b5563;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.projectFilter__button--active {
+  background-color: #7e5bef;
+  color: #ffffff;
+}
+
+.projectFilter__button:hover {
+  background-color: #e5e7eb;
+}
+
+.projectFilter__button--dark {
+  background-color: #374151;
+  color: #d1d5db;
+}
+
+.projectFilter__button--active-dark {
+  background-color: #7e5bef;
+  color: #ffffff;
+}
+
+.projectFilter__button--dark:hover {
+  background-color: #4b5563;
+}
